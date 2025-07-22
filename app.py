@@ -18,7 +18,7 @@ if st.button("Generate QR Code"):
         buf = BytesIO()
         img.save(buf, format='PNG')
         buf.seek(0)
-        st.image(buf, caption="Generated QR Code", use_column_width=False)
+        st.image(buf, caption="Generated QR Code", use_container_width=False)
         st.download_button(
             label="Download QR Code",
             data=buf,
